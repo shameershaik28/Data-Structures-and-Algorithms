@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class IsPrime {
     public int isPrime(int number) {
-        if(solve(number)==2)
+        if(solve(number)==2) // it counts the factors of number
         {
             return 1;
         }
