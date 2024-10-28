@@ -1,1 +1,1 @@
-# Data-Structures-and-Algorithm
+Data structures and algorithms (DSA)
