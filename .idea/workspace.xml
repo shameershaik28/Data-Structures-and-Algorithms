@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe6e2541-747f-4433-b2c1-35e565aa0de7" name="Changes" comment="" />
+    <list default="true" id="fe6e2541-747f-4433-b2c1-35e565aa0de7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ProblemSolving/FindPerfectNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +37,7 @@
   "keyToString": {
     "Application.ArrayRotation.executor": "Run",
     "Application.CountFactors.executor": "Run",
+    "Application.FindPerfectNumbers.executor": "Run",
     "Application.IsPrime.executor": "Run",
     "Application.ReverseInARange.executor": "Run",
     "Application.ReverseTheArray.executor": "Run",
@@ -65,7 +69,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730123300069</updated>
-      <workItem from="1730123301133" duration="8999000" />
+      <workItem from="1730123301133" duration="9972000" />
+      <workItem from="1730217432716" duration="67000" />
+      <workItem from="1730217514950" duration="1305000" />
     </task>
     <servers />
   </component>
