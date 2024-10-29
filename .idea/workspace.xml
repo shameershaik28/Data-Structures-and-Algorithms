@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe6e2541-747f-4433-b2c1-35e565aa0de7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ProblemSolving/FindPerfectNumbers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProblemSolving/FindPerfectNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProblemSolving/FindPerfectNumbers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +71,7 @@
       <updated>1730123300069</updated>
       <workItem from="1730123301133" duration="9972000" />
       <workItem from="1730217432716" duration="67000" />
-      <workItem from="1730217514950" duration="1305000" />
+      <workItem from="1730217514950" duration="4619000" />
     </task>
     <servers />
   </component>
