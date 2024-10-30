@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class RangeSumQuery {
     public int[] solve(int[] A, int[][] B) {
-        int m = B.length;
+        int m = B.length; // Number of queries
 
         int[] ans = new int[m];
         for(int i=0; i<m; i++) {
