@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class EvenNumbersInARange
 {
-    public int[] solve(int[] A, int[][] B) {
+    public long[] solve(int[] A, int[][] B) {
         int Q = B.length;
 
-        int[] ans = new int[Q];
+        long[] ans = new long[Q];
 
 
         for (int i = 0; i < Q; i++) {
