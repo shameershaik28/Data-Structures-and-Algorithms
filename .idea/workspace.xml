@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe6e2541-747f-4433-b2c1-35e565aa0de7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PrefixSum/SumOfEvenIndices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PrefixSum/SumOfOddIndices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +48,7 @@
     "Application.ReverseInARange.executor": "Run",
     "Application.ReverseTheArray.executor": "Run",
     "Application.SumOfEvenIndices.executor": "Run",
+    "Application.SumOfOddIndices.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -83,7 +85,7 @@
       <workItem from="1730363754947" duration="1301000" />
       <workItem from="1730384067961" duration="6455000" />
       <workItem from="1730394935452" duration="2978000" />
-      <workItem from="1730453529139" duration="3822000" />
+      <workItem from="1730453529139" duration="4718000" />
     </task>
     <servers />
   </component>
