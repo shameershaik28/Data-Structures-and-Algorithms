@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe6e2541-747f-4433-b2c1-35e565aa0de7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PrefixSum/EquilibriumIndexArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PrefixSum/ProductArrayPuzzle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +44,7 @@
     "Application.FindPerfectNumbers.executor": "Run",
     "Application.IsPrime.executor": "Run",
     "Application.PrefixSum.executor": "Run",
+    "Application.ProductArrayPuzzle.executor": "Run",
     "Application.RangeSumQuery.executor": "Run",
     "Application.ReverseInARange.executor": "Run",
     "Application.ReverseTheArray.executor": "Run",
@@ -85,7 +86,7 @@
       <workItem from="1730363754947" duration="1301000" />
       <workItem from="1730384067961" duration="6455000" />
       <workItem from="1730394935452" duration="2978000" />
-      <workItem from="1730453529139" duration="7120000" />
+      <workItem from="1730453529139" duration="13155000" />
     </task>
     <servers />
   </component>
