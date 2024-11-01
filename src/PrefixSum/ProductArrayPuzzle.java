@@ -8,17 +8,33 @@ public class ProductArrayPuzzle {
         int N = A.length;
 
         int[] output = new int[N];
-        int product = 1;
-        for(int i = 0; i < N; i++)
-        {
-             product *= A[i];
-        }
+       int[] prefixSum = new int[N];
 
-        for(int i = 0; i < N; i++)
-        {
-            output[i] = product/A[i];
-        }
-        return output;
+       prefixSum[0] = A[0];
+       for (int i = 1; i < N; i++) {
+           prefixSum[i] = prefixSum[i - 1] * A[i];
+       }
+
+       int[] suffixSum = new int[N];
+       suffixSum[N - 1] = A[N - 1];
+       for (int i = N - 2; i >= 0; i--) {
+           suffixSum[i] = suffixSum[i + 1] * A[i];
+       }
+
+       for (int i = 0; i < N; i++) {
+           if(i==0)
+           {
+               output[i] = suffixSum[i+1];
+           }
+           else if(i==N-1)
+           {
+              output[i] = prefixSum[i-1];
+           }
+           else {
+               output[i] = prefixSum[i-1] * suffixSum[i+1];
+           }
+       }
+       return output;
     }
         public static void main (String[]args){
             Scanner sc = new Scanner(System.in);
