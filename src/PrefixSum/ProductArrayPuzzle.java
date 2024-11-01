@@ -8,17 +8,17 @@ public class ProductArrayPuzzle {
         int N = A.length;
 
         int[] output = new int[N];
-        for(int i = 0; i < N; i++) {
-            int sum =1;
-            for(int j = 0; j < N; j++) {
-                if(i!=j)
-                {
-                    sum *= A[j];
-                }
-                output[i] = sum;
-            }
+        int product = 1;
+        for(int i = 0; i < N; i++)
+        {
+             product *= A[i];
         }
-            return output;
+
+        for(int i = 0; i < N; i++)
+        {
+            output[i] = product/A[i];
+        }
+        return output;
     }
         public static void main (String[]args){
             Scanner sc = new Scanner(System.in);
