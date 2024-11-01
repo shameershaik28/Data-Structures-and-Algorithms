@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe6e2541-747f-4433-b2c1-35e565aa0de7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/PrefixSum/SumOfEvenIndices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrefixSum/EvenNumbersInARange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrefixSum/EvenNumbersInARange.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,31 +33,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ArrayRotation.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CountFactors.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CountOfElements.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CountOfPrimes.executor&quot;: &quot;Run&quot;,
-    &quot;Application.EvenNumbersInARange.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FindPerfectNumbers.executor&quot;: &quot;Run&quot;,
-    &quot;Application.IsPrime.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PrefixSum.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RangeSumQuery.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ReverseInARange.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ReverseTheArray.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ArrayRotation.executor": "Run",
+    "Application.CountFactors.executor": "Run",
+    "Application.CountOfElements.executor": "Run",
+    "Application.CountOfPrimes.executor": "Run",
+    "Application.EvenNumbersInARange.executor": "Run",
+    "Application.FindPerfectNumbers.executor": "Run",
+    "Application.IsPrime.executor": "Run",
+    "Application.PrefixSum.executor": "Run",
+    "Application.RangeSumQuery.executor": "Run",
+    "Application.ReverseInARange.executor": "Run",
+    "Application.ReverseTheArray.executor": "Run",
+    "Application.SumOfEvenIndices.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -81,7 +82,8 @@
       <workItem from="1730302470278" duration="1051000" />
       <workItem from="1730363754947" duration="1301000" />
       <workItem from="1730384067961" duration="6455000" />
-      <workItem from="1730394935452" duration="1036000" />
+      <workItem from="1730394935452" duration="2978000" />
+      <workItem from="1730453529139" duration="3822000" />
     </task>
     <servers />
   </component>
