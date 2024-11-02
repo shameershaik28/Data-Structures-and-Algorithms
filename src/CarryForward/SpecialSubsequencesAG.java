@@ -5,18 +5,21 @@ import java.util.Scanner;
 public class SpecialSubsequencesAG {
     public long solve(String A) {
         int N = A.length();
-        int count = 0;
+        int countG = 0;
+        int pairs=0;
 
-        for (int i = 0; i < N; ++i) {
-            if (A.charAt(i) == 'A') {
-                for (int j = i + 1; j < N; ++j) {
-                    if (A.charAt(i) == 'A' && A.charAt(j) == 'G') {
-                        count++;
-                    }
+        for (int i = N-1; i>=0; i--) {
+            if(A.charAt(i) == 'G') {
+                countG++;
+            }
+            else
+            {
+                if(A.charAt(i) == 'A') {
+                    pairs=pairs+countG;
                 }
             }
         }
-        return count;
+        return pairs;
     }
 
     public static void main(String[] args) {
