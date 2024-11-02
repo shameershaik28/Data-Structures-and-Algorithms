@@ -7,14 +7,15 @@ public class SpecialSubsequencesAG {
         int N = A.length();
         int count = 0;
 
-        for(int i = 0; i < N; ++i) {
-            for(int j = i + 1; j < N; ++j) {
-                if (A.charAt(i) == 'A' && A.charAt(j) == 'G') {
-                   count++;
+        for (int i = 0; i < N; ++i) {
+            if (A.charAt(i) == 'A') {
+                for (int j = i + 1; j < N; ++j) {
+                    if (A.charAt(i) == 'A' && A.charAt(j) == 'G') {
+                        count++;
+                    }
                 }
             }
         }
-
         return count;
     }
 
