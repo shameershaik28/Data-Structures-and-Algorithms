@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class SpecialSubsequencesAG {
     public long solve(String A) {
         int N = A.length();
-        int countG = 0;
-        int pairs=0;
+        long countG = 0;
+        long pairs=0;
 
         for (int i = N-1; i>=0; i--) {
             if(A.charAt(i) == 'G') {
