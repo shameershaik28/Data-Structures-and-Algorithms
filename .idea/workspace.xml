@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe6e2541-747f-4433-b2c1-35e565aa0de7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Subarray/SubarrayInGivenRange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CarryForward/SpecialSubsequencesAG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarryForward/SpecialSubsequencesAG.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +49,7 @@
     "Application.ReverseInARange.executor": "Run",
     "Application.ReverseTheArray.executor": "Run",
     "Application.SpecialSubsequencesAG.executor": "Run",
+    "Application.SubarrayInGivenRange.executor": "Run",
     "Application.SumOfEvenIndices.executor": "Run",
     "Application.SumOfOddIndices.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
