@@ -1,9 +1,9 @@
-package SubArrays;
+package Subarray;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class GenerateAllSubarrays {
+public class GenerateSubarrays {
     public ArrayList<ArrayList<Integer>> solve(ArrayList<Integer> A) {
         int N = A.size();
 
@@ -33,7 +33,7 @@ public class GenerateAllSubarrays {
             A.add(sc.nextInt());
         }
 
-        GenerateAllSubarrays g = new GenerateAllSubarrays();
+        GenerateSubarrays g = new GenerateSubarrays();
         ArrayList<ArrayList<Integer>> res = g.solve(A);
         System.out.println(res);
 

@@ -1,4 +1,4 @@
-package SubArrays;
+package Subarray;
 
 import java.util.Scanner;
 
