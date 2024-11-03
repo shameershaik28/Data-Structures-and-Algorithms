@@ -28,16 +28,20 @@ System.out.println("Enter the elements of array");
             pf[i] = pf[i-1] + A[i];
         }
 
-
+        int max = Integer.MIN_VALUE;
         for(int s = 0; s< N; s++)
         {
             for(int e = s; e < N; e++)
             {
                 // Correct sum calculation using prefix sums
                int sum = (s == 0) ? pf[e] : pf[e] - pf[s - 1];
-                System.out.print(sum + " ");
+                if(sum > max)
+                {
+                    max = sum;
+                }
             }
 
         }
+        System.out.println(max);
     }
 }
