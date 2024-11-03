@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe6e2541-747f-4433-b2c1-35e565aa0de7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Subarray/SubarrayInGivenRange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SubArrays/AllSubarray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Subarray/GenerateAllSubarrays.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +36,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AllSubarray.executor": "Run",
     "Application.ArrayRotation.executor": "Run",
     "Application.CountFactors.executor": "Run",
     "Application.CountOfElements.executor": "Run",
@@ -42,6 +44,7 @@
     "Application.EquilibriumIndexArray.executor": "Run",
     "Application.EvenNumbersInARange.executor": "Run",
     "Application.FindPerfectNumbers.executor": "Run",
+    "Application.GenerateAllSubarrays.executor": "Run",
     "Application.IsPrime.executor": "Run",
     "Application.PrefixSum.executor": "Run",
     "Application.ProductArrayPuzzle.executor": "Run",
@@ -61,6 +64,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -89,6 +93,8 @@
       <workItem from="1730384067961" duration="6455000" />
       <workItem from="1730394935452" duration="2978000" />
       <workItem from="1730453529139" duration="16225000" />
+      <workItem from="1730623863058" duration="4000" />
+      <workItem from="1730640003606" duration="566000" />
     </task>
     <servers />
   </component>
