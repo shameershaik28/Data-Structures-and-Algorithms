@@ -1,4 +1,4 @@
-package CarryForward;
+package Arrays.CarryForward;
 
 import java.util.ArrayList;
 import java.util.Scanner;

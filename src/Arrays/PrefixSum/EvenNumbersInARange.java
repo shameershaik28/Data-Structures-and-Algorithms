@@ -1,4 +1,4 @@
-package PrefixSum;
+package Arrays.PrefixSum;
 
 import java.util.Arrays;
 import java.util.Scanner;
