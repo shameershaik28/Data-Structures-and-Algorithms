@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class GoodPair {
     public int solve(int[] A, int B) {
         int N = A.length;
+        // Edge case for array size < 2
+        if (N < 2) return 0;
 
         for(int i =0; i<N ; i++)
         {
