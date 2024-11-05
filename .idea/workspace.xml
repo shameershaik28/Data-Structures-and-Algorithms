@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe6e2541-747f-4433-b2c1-35e565aa0de7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Arrays/IntroductionToArrays/LinearSearchMultipleOccurences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Arrays/IntroductionToArrays/TimeToEquality.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +49,7 @@
     "Application.GoodPair.executor": "Run",
     "Application.IsPrime.executor": "Run",
     "Application.LeadersInArray.executor": "Run",
+    "Application.LinearSearchMultipleOccurences.executor": "Run",
     "Application.MaxMinOfAnArray.executor": "Run",
     "Application.PickFromBothSides.executor": "Run",
     "Application.PrefixSum.executor": "Run",
@@ -61,6 +62,7 @@
     "Application.SubarraySums.executor": "Run",
     "Application.SumOfEvenIndices.executor": "Run",
     "Application.SumOfOddIndices.executor": "Run",
+    "Application.TimeToEquality.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -102,7 +104,7 @@
       <workItem from="1730623863058" duration="4000" />
       <workItem from="1730640003606" duration="9965000" />
       <workItem from="1730721874146" duration="8139000" />
-      <workItem from="1730819208099" duration="5714000" />
+      <workItem from="1730819208099" duration="8717000" />
     </task>
     <servers />
   </component>
