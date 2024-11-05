@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe6e2541-747f-4433-b2c1-35e565aa0de7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Arrays/IntroductionToArrays/MaxMinOfAnArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/IntroductionToArrays/GoodPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/IntroductionToArrays/GoodPair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Arrays/IntroductionToArrays/MaxMinOfAnArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/IntroductionToArrays/MaxMinOfAnArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +49,7 @@
     "Application.GoodPair.executor": "Run",
     "Application.IsPrime.executor": "Run",
     "Application.LeadersInArray.executor": "Run",
+    "Application.MaxMinOfAnArray.executor": "Run",
     "Application.PickFromBothSides.executor": "Run",
     "Application.PrefixSum.executor": "Run",
     "Application.ProductArrayPuzzle.executor": "Run",
@@ -102,7 +102,7 @@
       <workItem from="1730623863058" duration="4000" />
       <workItem from="1730640003606" duration="9965000" />
       <workItem from="1730721874146" duration="8139000" />
-      <workItem from="1730819208099" duration="3737000" />
+      <workItem from="1730819208099" duration="4924000" />
     </task>
     <servers />
   </component>
