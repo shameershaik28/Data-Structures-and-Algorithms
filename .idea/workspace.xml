@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe6e2541-747f-4433-b2c1-35e565aa0de7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Arrays/Subarray/CountingSubarraysEasy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Arrays/Subarray/ClosestMinMax.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +108,7 @@
       <workItem from="1730721874146" duration="8139000" />
       <workItem from="1730819208099" duration="9146000" />
       <workItem from="1730832416499" duration="1672000" />
-      <workItem from="1730894465897" duration="1557000" />
+      <workItem from="1730894465897" duration="5195000" />
     </task>
     <servers />
   </component>
