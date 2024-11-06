@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class SecondLargest {
     public int solve(int[] A) {
+        if (A.length < 2) {
+            return -1; // Not enough elements for a second largest
+        }
         int max=Integer.MIN_VALUE;
         for(int i=1;i<A.length;i++){
             if(A[i]>max){
@@ -16,7 +19,7 @@ public class SecondLargest {
                 Smax=A[i];
             }
         }
-        return Smax;
+        return (Smax == Integer.MIN_VALUE) ? -1 : Smax; // Return -1 if no second largest exists
     }
 
     public static void main(String[] args) {
