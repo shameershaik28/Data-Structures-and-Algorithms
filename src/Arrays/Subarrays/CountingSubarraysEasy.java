@@ -2,6 +2,7 @@ package Arrays.Subarrays;
 
 import java.util.Scanner;
 
+//brute-force approach
 public class CountingSubarraysEasy {
     public int solve(int[] A, int B) {
         int N = A.length;
