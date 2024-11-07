@@ -13,7 +13,7 @@ public class SubarraySums {
             arr[i] = sc.nextInt();
         }
 
-        //Nested loops
+
         for(int i = 0; i < N; i++){
             int sum =0;
             for(int j =i; j < N; j++){
