@@ -2,6 +2,7 @@ package Arrays.Subarrays;
 
 import java.util.Scanner;
 
+// Used Prefix Sum approach
 public class MaximumSubarraySum
 {
     public static void main(String[] args) {
