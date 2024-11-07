@@ -2,7 +2,7 @@ package Arrays.Subarrays;
 
 import java.util.Scanner;
 
-//Brute Force Approach
+//Brute-Force Approach used here
 public class SubarraySums {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
