@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe6e2541-747f-4433-b2c1-35e565aa0de7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Arrays/Subarray/ClosestMinMax.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/SubarraySums.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarray/MaximumSubarraySum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +52,7 @@
     "Application.LeadersInArray.executor": "Run",
     "Application.LinearSearchMultipleOccurences.executor": "Run",
     "Application.MaxMinOfAnArray.executor": "Run",
+    "Application.MaximumSubarrayEasy.executor": "Run",
     "Application.PickFromBothSides.executor": "Run",
     "Application.PrefixSum.executor": "Run",
     "Application.ProductArrayPuzzle.executor": "Run",
@@ -108,7 +109,8 @@
       <workItem from="1730721874146" duration="8139000" />
       <workItem from="1730819208099" duration="9146000" />
       <workItem from="1730832416499" duration="1672000" />
-      <workItem from="1730894465897" duration="5195000" />
+      <workItem from="1730894465897" duration="9810000" />
+      <workItem from="1730962399860" duration="2418000" />
     </task>
     <servers />
   </component>

@@ -2,7 +2,7 @@ package Arrays.Subarray;
 
 import java.util.Scanner;
 
-public class SubarraySums
+public class MaximumSubarraySum
 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
