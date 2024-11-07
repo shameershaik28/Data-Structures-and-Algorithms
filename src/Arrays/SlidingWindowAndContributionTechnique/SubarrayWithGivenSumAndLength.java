@@ -5,21 +5,32 @@ import java.util.Scanner;
 public class SubarrayWithGivenSumAndLength {
     public int solve(int[] A, int B, int C) {
         int N = A.length;
+        int sum = 0;
 
-        for(int i =0; i<N ; i++)
-        {
-            int sum =0;
-            for(int j=i;j<N ;j++)
-            {
-                sum+=A[j];
-                int len= j-i+1;
+        // Initial sum for the first window
+        for (int i = 0; i < B; i++) {
+            sum += A[i];
+        }
 
-                if(len==B && sum==C)
-                {
-                    return 1;
-                }
+        // If the first window already has the desired sum, return 1
+        if (sum == C) {
+            return 1;
+        }
+
+        // Sliding window: adjust sum as we slide over the array
+        int s = 0, e = B;  // start of window is 0, end is B
+        while (e < N) {
+            sum = sum - A[s] + A[e];  // Slide the window by removing the element at 's' and adding the element at 'e'
+            s++;  // Move the start of the window to the right
+            e++;  // Move the end of the window to the right
+
+            // If the sum matches C at any point, return 1
+            if (sum == C) {
+                return 1;
             }
         }
+
+        // If no such subarray is found, return 0
         return 0;
     }
     public static void main(String[] args) {
