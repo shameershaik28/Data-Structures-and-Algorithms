@@ -2,7 +2,7 @@ package Arrays.SlidingWindowAndContributionTechnique;
 
 import java.util.Scanner;
 
-//Contribution Technique Approach
+//Sliding window Technique Approach
 public class MaximumSubarraySumOfFixedLength {
     public long solve(int[] A, int B) {
         int N = A.length;
