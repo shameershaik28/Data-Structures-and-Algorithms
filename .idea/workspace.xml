@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe6e2541-747f-4433-b2c1-35e565aa0de7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/SubarraySums.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/SubarraySums.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarray/MaximumSubarraySum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/AllSubarray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/AllSubarray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/ClosestMinMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/ClosestMinMax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/CountingSubarraysEasy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/CountingSubarraysEasy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/GenerateAllSubarrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/GenerateAllSubarrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/GenerateSubarrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/GenerateSubarrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/MaximumSubarraySum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/MaximumSubarraySum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/SubarrayInGivenRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/SubarrayInGivenRange.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +117,7 @@
       <workItem from="1730819208099" duration="9146000" />
       <workItem from="1730832416499" duration="1672000" />
       <workItem from="1730894465897" duration="9810000" />
-      <workItem from="1730962399860" duration="2418000" />
+      <workItem from="1730962399860" duration="6259000" />
     </task>
     <servers />
   </component>

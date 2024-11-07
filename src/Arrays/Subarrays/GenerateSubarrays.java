@@ -1,41 +1,41 @@
-package Arrays.Subarray;
+package Arrays.Subarrays;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class GenerateAllSubarrays {
+public class GenerateSubarrays {
     public ArrayList<ArrayList<Integer>> solve(ArrayList<Integer> A) {
         int N = A.size();
+
         ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
 
-        for(int i = 0; i < N; i++) {
-            for(int j = i; j<N; j++) {
+        for(int s=0; s<N; s++)
+        {
+            for(int e =s; e<N ;e++) {
                 ArrayList<Integer> sub = new ArrayList<>();
-                for(int k = i; k <=j; k++) {
+                for (int k = s; k <= e; k++) {
                     sub.add(A.get(k));
                 }
                 ans.add(sub);
             }
         }
         return ans;
-
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of the array");
         int N = sc.nextInt();
 
-        ArrayList<Integer> list = new ArrayList<>();
 
         System.out.println("Enter the elements of the array");
-        for(int i=0; i<N; i++)
-        {
-            list.add(sc.nextInt());
+        ArrayList<Integer> A = new ArrayList<>();
+        for (int i = 0; i < N; i++) {
+            A.add(sc.nextInt());
         }
 
-        GenerateAllSubarrays g = new GenerateAllSubarrays();
-        ArrayList<ArrayList<Integer>> res = g.solve(list);
-        System.out.println("The subarrays are : "+ res);
+        GenerateSubarrays g = new GenerateSubarrays();
+        ArrayList<ArrayList<Integer>> res = g.solve(A);
+        System.out.println(res);
 
     }
 }

@@ -1,4 +1,4 @@
-package Arrays.Subarray;
+package Arrays.Subarrays;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class AllSubarray {
         int N = sc.nextInt();
 
         int[] A = new int[N];
-System.out.println("Enter the elements of the array");
+        System.out.println("Enter the elements of the array");
         for(int i = 0; i < N; i++)
         {
             A[i] = sc.nextInt();
