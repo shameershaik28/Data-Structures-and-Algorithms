@@ -3,6 +3,7 @@ package Arrays.Subarrays;
 import java.util.Arrays;
 import java.util.Scanner;
 
+//Brute-Force Approach
 public class SubarrayInGivenRange {
     public int[] solve(int[] A, int B, int C) {
 
