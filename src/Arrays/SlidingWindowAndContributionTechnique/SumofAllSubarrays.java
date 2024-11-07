@@ -2,28 +2,22 @@ package Arrays.SlidingWindowAndContributionTechnique;
 
 import java.util.Scanner;
 
-//Prefix sum Approach
+//Contribution Technique Approach
 public class SumofAllSubarrays {
    public long subarraySum(int[] A) {
        int N = A.length;
-       long total = 0;
-       int[] pf= new int[N];
-       pf[0]=A[0];
+       long total =0;
 
-       for(int i=1;i<N;i++)
+       for(int i=0; i<N; i++)
        {
-           pf[i]=pf[i-1]+A[i];
+           //calculate number of occ of specific index
+           int occ = (i+1)*(N-i);
+           //multiply the occ with the index element
+           int contribution = A[i]*occ;
+           //then add the contribution into the total variable
+           total += contribution;
        }
-
-       for(int s=0;s<N;s++)
-       {
-           for(int e=s;e<N;e++)
-           {
-              long sum = (s==0) ? pf[e] : pf[e] - pf[s-1];
-              total += sum;
-           }
-       }
-       return total;
+      return total;
    }
 
     public static void main(String[] args) {
