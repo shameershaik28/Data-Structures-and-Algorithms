@@ -6,18 +6,20 @@ import java.util.Scanner;
 public class PrefixMaximum {
     public int[] solve(int[] A) {
         int N = A.length;
-        int max = A[0];
-        int maxE[]= new int[N];
-         maxE[0]= A[0];
-        for(int i=1; i<N;i++)
+        int max = Integer.MIN_VALUE;
+
+        for(int i=0; i<N;i++)
         {
             if(A[i]>max)
             {
                 max = A[i];
             }
-            maxE[i] = max;
+            if(A[i]<max)
+            {
+                A[i]=max;
+            }
         }
-        return maxE;
+        return A;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
