@@ -6,14 +6,14 @@ public class MaxSumContiguousSubarray {
     public int maxSubArray(final int[] A) {
         int N = A.length;
         int max = Integer.MIN_VALUE;
-
+        int currSum = 0;
         for(int i = 0; i < N; i++) {
-            int sum = 0;
-            for(int j = i; j < N; j++) {
-                sum += A[j];
-                if(sum > max) {
-                    max = sum;
-                }
+            currSum += A[i];
+            if(currSum > max) {
+                max = currSum;
+            }
+            if(currSum < 0) {
+                currSum = 0;
             }
         }
         return max;
