@@ -5,18 +5,35 @@ import java.util.Scanner;
 
 public class RangeSum {
     public int[] solve(int[] A, int[][] B) {
+        int N = A.length;
         int Q = B.length;
+        int[] arr = new int[N];
 
-        for(int i = 0; i < Q; i++) {
-            int start = B[i][0]-1;
-            int end = B[i][1]-1;
+        // Apply the difference array approach for each query
+        for (int i = 0; i < Q; i++) {
+            int start = B[i][0] - 1; // 1-based to 0-based index
+            int end = B[i][1] - 1;   // 1-based to 0-based index
             int val = B[i][2];
 
-            for(int j = start; j <=end; j++) {
-                A[j]+=val;
-            }
+            // Add value at the start index
+            arr[start] += val;
 
+            // Subtract value after the end index if within bounds
+            if (end + 1 < N) {
+                arr[end + 1] -= val;
+            }
         }
+
+        // Perform prefix sum on arr to accumulate the changes
+        for (int i = 1; i < N; i++) {
+            arr[i] += arr[i - 1];
+        }
+
+        // Add the accumulated values from arr to A
+        for (int i = 0; i < N; i++) {
+            A[i] += arr[i]; // Update A with the accumulated changes
+        }
+
         return A;
     }
     public static void main(String[] args) {
