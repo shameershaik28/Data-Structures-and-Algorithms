@@ -6,15 +6,25 @@ public class FindInMatrix {
     public int solve(int[][] A, int B) {
         int N = A.length;
 
-        for(int i = 0; i < N; i++) {
-            for(int j = 0; j < N; j++) {
-                if(A[i][j]==B)
-                {
-                    return 1;
-                }
+
+        int i =0, j =N-1;
+
+        while(i<N && j>=0)
+        {
+            if(A[i][j]==B)
+            {
+                return 1;
+            }
+            else if(A[i][j] <B)
+            {
+                i++;
+            }
+            else {
+                j--;
             }
         }
         return 0;
+
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
