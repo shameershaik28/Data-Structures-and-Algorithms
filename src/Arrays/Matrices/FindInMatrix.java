@@ -28,10 +28,11 @@ public class FindInMatrix {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the matrix");
         int N = sc.nextInt();
 
         int[][] A = new int[N][N];
-
+System.out.println("Enter the elements of the matrix");
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 A[i][j] = sc.nextInt();
