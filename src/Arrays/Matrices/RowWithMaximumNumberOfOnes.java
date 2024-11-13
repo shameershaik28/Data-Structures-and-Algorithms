@@ -5,23 +5,16 @@ import java.util.Scanner;
 public class RowWithMaximumNumberOfOnes {
     public int solve(int[][] A) {
         int N = A.length;
-        int max = Integer.MIN_VALUE;
-        int index=-1;
+       int i =0, j =N-1, ans =0;
 
-        for(int i = 0; i < N; i++) {
-            int sum =0;
-            for(int j = 0; j < N; j++) {
-                if(A[i][j] == 1) {
-                    sum++;
-                }
-            }
-
-            if(sum > max) {
-                max = sum;
-                index = i;
-            }
-        }
-        return index;
+       while(i<N && j>=0){
+           while(j>=0 && A[i][j]==1){
+               j--;
+               ans=i;
+           }
+           i++;
+       }
+        return ans;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
