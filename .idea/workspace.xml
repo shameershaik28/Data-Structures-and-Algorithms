@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe6e2541-747f-4433-b2c1-35e565aa0de7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/SubarraySums.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Arrays/Matrices/SubMatrices/MaximumSubmatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Heaps/HeapQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/AllSubarray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/AllSubarray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/ClosestMinMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/ClosestMinMax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/CountingSubarraysEasy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/CountingSubarraysEasy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/GenerateAllSubarrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/GenerateAllSubarrays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/GenerateSubarrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/GenerateSubarrays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/MaximumSubarraySum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/MaximumSubarraySum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/Subarray/SubarrayInGivenRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Subarrays/SubarrayInGivenRange.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +25,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -42,36 +42,65 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AddTheMatrices.executor": "Run",
     "Application.AllSubarray.executor": "Run",
+    "Application.AntiDiagonals.executor": "Run",
+    "Application.AreMatricesSame.executor": "Run",
     "Application.ArrayRotation.executor": "Run",
     "Application.BestTimeToBuyAndSellStocks.executor": "Run",
     "Application.Bulbs.executor": "Run",
+    "Application.ColumnSum.executor": "Run",
+    "Application.ContinuousSumQuery.executor": "Run",
     "Application.CountFactors.executor": "Run",
     "Application.CountOfElements.executor": "Run",
     "Application.CountOfPrimes.executor": "Run",
     "Application.CountingSubarraysEasy.executor": "Run",
     "Application.EquilibriumIndexArray.executor": "Run",
     "Application.EvenNumbersInARange.executor": "Run",
+    "Application.FindInMatrix.executor": "Run",
     "Application.FindPerfectNumbers.executor": "Run",
     "Application.GenerateAllSubarrays.executor": "Run",
     "Application.GoodPair.executor": "Run",
+    "Application.GoodSubarraysEasy.executor": "Run",
+    "Application.HeapQueries.executor": "Run",
     "Application.IsPrime.executor": "Run",
     "Application.LeadersInArray.executor": "Run",
     "Application.LinearSearchMultipleOccurences.executor": "Run",
+    "Application.MainDiagonalSum.executor": "Run",
+    "Application.MatrixScalarProduct.executor": "Run",
+    "Application.MatrixSubtraction.executor": "Run",
+    "Application.MatrixTranspose.executor": "Run",
     "Application.MaxMinOfAnArray.executor": "Run",
+    "Application.MaxSumContiguousSubarray.executor": "Run",
     "Application.MaximumSubarrayEasy.executor": "Run",
+    "Application.MaximumSubarraySumOfFixedLength.executor": "Run",
+    "Application.MaximumSubmatrix.executor": "Run",
+    "Application.MinimumSwaps.executor": "Run",
     "Application.PickFromBothSides.executor": "Run",
+    "Application.PrefixMaximum.executor": "Run",
     "Application.PrefixSum.executor": "Run",
     "Application.ProductArrayPuzzle.executor": "Run",
+    "Application.RainWaterTrapped.executor": "Run",
+    "Application.RangeSum.executor": "Run",
     "Application.RangeSumQuery.executor": "Run",
     "Application.ReverseInARange.executor": "Run",
     "Application.ReverseTheArray.executor": "Run",
+    "Application.RotateMatrix.executor": "Run",
+    "Application.RowSum.executor": "Run",
+    "Application.RowWithMaximumNumberOfOnes.executor": "Run",
     "Application.SecondLargest.executor": "Run",
     "Application.SpecialSubsequencesAG.executor": "Run",
+    "Application.SpiralOrderMatrix.executor": "Run",
+    "Application.Spiralmatrix.executor": "Run",
     "Application.SubarrayInGivenRange.executor": "Run",
     "Application.SubarraySums.executor": "Run",
+    "Application.SubarrayWithGivenSumAndLength.executor": "Run",
+    "Application.SubarrayWithLeastAverage.executor": "Run",
+    "Application.SuffixMaximum.executor": "Run",
+    "Application.SumOfAllSubmatrices.executor": "Run",
     "Application.SumOfEvenIndices.executor": "Run",
     "Application.SumOfOddIndices.executor": "Run",
+    "Application.SumofAllSubarrays.executor": "Run",
     "Application.TimeToEquality.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -117,7 +146,15 @@
       <workItem from="1730819208099" duration="9146000" />
       <workItem from="1730832416499" duration="1672000" />
       <workItem from="1730894465897" duration="9810000" />
-      <workItem from="1730962399860" duration="6259000" />
+      <workItem from="1730962399860" duration="25030000" />
+      <workItem from="1731052575253" duration="633000" />
+      <workItem from="1731076318281" duration="5186000" />
+      <workItem from="1731223112017" duration="7048000" />
+      <workItem from="1731247899811" duration="5201000" />
+      <workItem from="1731344931907" duration="745000" />
+      <workItem from="1731398316712" duration="13172000" />
+      <workItem from="1731482200843" duration="10792000" />
+      <workItem from="1731570947147" duration="1992000" />
     </task>
     <servers />
   </component>
