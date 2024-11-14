@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SumOfAllSubmatrices {
     public int solve(int[][] A) {
         int N = A.length;
-        int M = A[0].length;
+        int M = A[0].length; // columns
 
         int ans =0;
         for (int i = 0; i < N; i++) {
