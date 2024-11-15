@@ -16,7 +16,7 @@ public class NobleInteger {
         {
             if(A[i]!=A[i+1])
             {
-                if(A[i]==n-1-i)
+                if(A[i]==n-1-i) // n-1-i gives number of integers greater than A[i]
                 {
                     return 1;
                 }
