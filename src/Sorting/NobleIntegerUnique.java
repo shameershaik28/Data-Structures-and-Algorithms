@@ -3,6 +3,7 @@ package Sorting;
 import java.util.Scanner;
 
 //Brute Force
+//count of elements < element = ele itself
 public class NobleIntegerUnique {
     public int solve(int[] A) {
        int n = A.length;
