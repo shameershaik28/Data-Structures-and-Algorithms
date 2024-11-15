@@ -1,5 +1,6 @@
 package Sorting;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 //Brute Force
@@ -7,15 +8,10 @@ import java.util.Scanner;
 public class NobleIntegerUnique {
     public int solve(int[] A) {
        int n = A.length;
+        Arrays.sort(A); //sort the array
        int ans = 0;
        for(int i = 0; i < n; i++) {
-           int c=0;
-           for(int j = 0; j < n; j++) {
-               if(A[j]<A[i]) {
-                   c++;
-               }
-           }
-           if(c==A[i])
+           if(A[i] == i)
            {
                ans++;
            }
