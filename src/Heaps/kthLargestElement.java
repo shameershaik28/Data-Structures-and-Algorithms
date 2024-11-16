@@ -1,63 +1,25 @@
 package Heaps;
 
+import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class kthLargestElement {
-    // Approach 2: Using Max-Heap (HeapSort Implementation)
-    // Convert the array into a max heap using heapify.
-    // Extract the maximum element K times to get the Kth largest element.
     public static int solve(int[] A, int K) {
         int N = A.length;
 
-        // Build max heap (Convert array into a max heap)
-        for (int i = N / 2 - 1; i >= 0; i--) {
-            heapifyIterative(A, N, i);
+        PriorityQueue<Integer> pq = new PriorityQueue<>(K);
+
+        for (int i = 0; i < K; i++) {
+            pq.add(A[i]);
         }
 
-        // Extract the max element K times
-        for (int i = N - 1; i >= N - K; i--) {
-            // Swap the root (maximum element) with the last element in the heap
-            int temp = A[0];
-            A[0] = A[i];
-            A[i] = temp;
-
-            // Heapify the reduced heap
-            heapifyIterative(A, i, 0);
+        for (int i = K; i < N; i++) {
+            if (A[i] > pq.peek()) {
+                pq.poll();
+                pq.add(A[i]);
+            }
         }
-
-        // The Kth largest element is at the root after K extractions
-        return A[N - K];
-    }
-
-    // Iterative Heapify function to maintain max heap property
-    private static void heapifyIterative(int[] arr, int n, int i) {
-        int largest = i;
-        while (true) {
-            // Left and Right child indices
-            int left = 2 * i + 1;
-            int right = 2 * i + 2;
-
-            // Find the largest among root, left child, and right child
-            if (left < n && arr[left] > arr[largest]) {
-                largest = left;
-            }
-            if (right < n && arr[right] > arr[largest]) {
-                largest = right;
-            }
-
-            // If the largest is still the root, the heap property is satisfied
-            if (largest == i) {
-                break;
-            }
-
-            // Swap the root with the largest child
-            int temp = arr[i];
-            arr[i] = arr[largest];
-            arr[largest] = temp;
-
-            // Move down to the largest child
-            i = largest;
-        }
+        return pq.peek();
     }
 
     public static void main(String[] args) {
