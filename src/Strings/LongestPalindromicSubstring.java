@@ -3,40 +3,40 @@ package Strings;
 import java.util.Scanner;
 
 public class LongestPalindromicSubstring {
-    public int longestPalindrome(String A) {
+    public String longestPalindrome(String A) {
         int n = A.length();
-        int even =0, odd =0;
+        int start = 0;  // To store the starting index of the longest palindrome found
+        int maxLength = 0;  // To store the maximum length of palindrome found
 
-        for(int i=0;i<n;i++){
-            int p1=i, p2=i;
-            while(p1>=0 && p2<n){
-                if(A.charAt(p1)==A.charAt(p2)){
-                    p1--;
-                    p2++;
-                }
-                else{
-                    break;
-                }
+        // Check for odd length palindromes
+        for (int i = 0; i < n; i++) {
+            int p1 = i, p2 = i;
+            while (p1 >= 0 && p2 < n && A.charAt(p1) == A.charAt(p2)) {
+                p1--;
+                p2++;
             }
-            int len = p2-p1-1;
-            odd = Math.max(odd,len);
+            int len = p2 - p1 - 1;  // Length of the palindrome
+            if (len > maxLength) {
+                maxLength = len;
+                start = p1 + 1;  // Update the starting index of the palindrome
+            }
         }
 
-        for(int i=0;i<n;i++){
-            int p1=i, p2=i+1;
-            while(p1>=0 && p2<n){
-                if(A.charAt(p1)==A.charAt(p2)){
-                    p1--;
-                    p2++;
-                }
-                else{
-                    break;
-                }
+        // Check for even length palindromes
+        for (int i = 0; i < n; i++) {
+            int p1 = i, p2 = i + 1;
+            while (p1 >= 0 && p2 < n && A.charAt(p1) == A.charAt(p2)) {
+                p1--;
+                p2++;
             }
-            int len = p2-p1-1;
-            even = Math.max(even,len);
+            int len = p2 - p1 - 1;
+            if (len > maxLength) {
+                maxLength = len;
+                start = p1 + 1;
+            }
         }
-        return Math.max(odd, even);
+
+        return A.substring(start, start + maxLength);  // Return the longest palindromic substring
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
