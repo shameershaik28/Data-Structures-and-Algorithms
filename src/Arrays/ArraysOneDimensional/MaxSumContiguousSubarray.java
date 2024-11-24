@@ -1,4 +1,4 @@
-package Arrays.OneDimensional;
+package Arrays.ArraysOneDimensional;
 
 import java.util.Scanner;
 
