@@ -3,7 +3,7 @@ package Arrays.ArraysOneDimensional;
 import java.util.Scanner;
 
 //Kadane’s Algorithm (O(N)):
-//Find the maximum subarray sum.
+//Find the maximum subarray sum
 public class MaxSumContiguousSubarray {
     public int maxSubArray(final int[] A) {
         int N = A.length;
