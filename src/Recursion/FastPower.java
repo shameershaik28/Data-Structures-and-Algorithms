@@ -8,7 +8,14 @@ public class FastPower {
         {
             return 1;
         }
-        return power(A, B - 1) * A;
+      if(B%2==0)
+      {
+          return power(A,B/2)*power(A,B/2);
+      }
+      else
+      {
+          return power(A,B/2)*power(A,B/2)*A;
+      }
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
