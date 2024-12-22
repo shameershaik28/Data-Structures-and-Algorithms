@@ -2,29 +2,27 @@ package Arrays.PrefixSum;
 
 import java.util.Scanner;
 
-public class EquilibriumIndexArray{
+public class EquilibriumIndexArray {
     public int solve(int[] A) {
-        int N = A.length;
-        if (N == 0) return -1; // Handle empty array case
-        int[] pf = new int[N];
+        int totalSum = 0;
 
-        pf[0]= A[0];
-        for(int i=1;i<N;i++)
-        {
-            pf[i] = pf[i-1]+A[i];
+        // Calculate total sum using a traditional loop
+        for (int i = 0; i < A.length; i++) {
+            totalSum += A[i];
         }
 
+        int leftSum = 0;
 
-        for(int i =0; i<N ; i++)
-        {
-            int leftSum = (i > 0) ? pf[i - 1] : 0; // Simplified initialization of leftSum
-            int rightSum = pf[N-1]-pf[i];
-            if(leftSum==rightSum)
-            {
-                return i ;
+        // Iterate through the array to find the equilibrium index
+        for (int i = 0; i < A.length; i++) {
+            int rightSum = totalSum - leftSum - A[i];
+            if (leftSum == rightSum) {
+                return i; // Equilibrium index found
             }
+            leftSum += A[i];
         }
-        return -1;
+
+        return -1; // No equilibrium index found
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
