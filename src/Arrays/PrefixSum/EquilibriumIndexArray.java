@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class EquilibriumIndexArray {
     public int solve(int[] A) {
+        //Edge case
+        if (A.length == 0) {
+            return -1; // Edge case: Empty array, no equilibrium index
+        }
         int totalSum = 0;
 
         // Calculate total sum using a traditional loop
