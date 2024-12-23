@@ -5,16 +5,43 @@ import java.util.Scanner;
 
 public class RangeSumQuery {
     public int[] solve(int[] A, int[][] B) {
-        int m = B.length; // Number of queries
-
+        int n = A.length;
+        int m = B.length;
         int[] ans = new int[m];
-        for(int i=0; i<m; i++) {
-            int sum = 0;
-            for(int j=B[i][0]; j<=B[i][1]; j++) {
-             sum =sum +A[j];
-            }
-            ans[i] = sum;
+
+        // Edge Case: Empty array (if n == 0, we should return empty result array for queries)
+        if (n == 0) {
+            Arrays.fill(ans, 0);  // No elements to sum
+            return ans;
         }
+
+        // Step 1: Preprocess prefix sum array
+        int[] prefix = new int[n];  // prefix[0] = A[0], and prefix[i] = sum from A[0] to A[i]
+        prefix[0] = A[0];  // Set the first element
+
+        // Build the prefix sum array
+        for (int i = 1; i < n; i++) {
+            prefix[i] = prefix[i - 1] + A[i];
+        }
+
+        // Step 2: Answer each query in O(1) using the prefix sum array
+        for (int i = 0; i < m; i++) {
+            int left = B[i][0];
+            int right = B[i][1];
+
+            // Edge Case: Invalid range where left > right
+            if (left > right || left < 0 || right >= n) {
+                ans[i] = 0; // Return 0 for invalid queries
+            } else {
+                // Range sum using prefix sum array
+                if (left == 0) {
+                    ans[i] = prefix[right];  // Sum from 0 to right
+                } else {
+                    ans[i] = prefix[right] - prefix[left - 1];  // Sum from left to right
+                }
+            }
+        }
+
         return ans;
     }
     public static void main(String[] args) {
