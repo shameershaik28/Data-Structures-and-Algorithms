@@ -4,21 +4,20 @@ import java.util.Scanner;
 
 //Contribution Technique Approach
 public class SumofAllSubarrays {
-   public long subarraySum(int[] A) {
-       int N = A.length;
-       long total =0;
+    public long subarraySum(int[] A) {
+        int N = A.length;
+        long total = 0;
 
-       for(int i=0; i<N; i++)
-       {
-           //calculate number of occ of specific index
-           int occ = (i+1)*(N-i);
-           //multiply the occ with the index element
-           int contribution = A[i]*occ;
-           //then add the contribution into the total variable
-           total += contribution;
-       }
-      return total;
-   }
+        for(int i = 0; i < N; i++) {
+            // Calculate number of occurrences for the specific index
+            long occ = (long)(i + 1) * (long)(N - i); // Use long to prevent overflow
+            // Multiply the occurrences with the index element
+            long contribution = (long) A[i] * occ; // Use long to handle larger numbers
+            // Add the contribution into the total variable
+            total += contribution;
+        }
+        return total;
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
