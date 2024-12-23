@@ -8,17 +8,16 @@ public class GenerateAllSubarrays {
         int N = A.size();
         ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
 
-        for(int i = 0; i < N; i++) {
-            for(int j = i; j<N; j++) {
-                ArrayList<Integer> sub = new ArrayList<>();
-                for(int k = i; k <=j; k++) {
-                    sub.add(A.get(k));
-                }
-                ans.add(sub);
+        // Loop to generate all subarrays
+        for (int i = 0; i < N; i++) {
+            ArrayList<Integer> sub = new ArrayList<>();
+            // For each starting point i, extend the subarray to the right
+            for (int j = i; j < N; j++) {
+                sub.add(A.get(j)); // Add element to the current subarray
+                ans.add(new ArrayList<>(sub)); // Store the current subarray
             }
         }
         return ans;
-
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
