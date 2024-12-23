@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class ClosestMinMax {
     public int solve(int[] A) {
+        // Edge case: If the array has only one element
+        if (A.length == 1) {
+            return 1; // The subarray with the only element is trivially the answer
+        }
 
         int min_ele = Integer.MAX_VALUE, max_ele = Integer.MIN_VALUE;   // min and max value of the array
         int min_Index = -1, max_Index = -1; // index of the last element having value equal to min_ele and max_ele
