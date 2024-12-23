@@ -5,7 +5,11 @@ import java.util.Scanner;
 
 public class ProductArrayPuzzle {
     public int[] solve(int[] A) {
+
         int N = A.length;
+        if (N == 0) {
+            return new int[0]; // Handle empty array case
+        }
 
         int[] output = new int[N];
 
