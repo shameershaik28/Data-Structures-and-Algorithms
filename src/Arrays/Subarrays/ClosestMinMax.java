@@ -19,10 +19,12 @@ public class ClosestMinMax {
         }
 
         for(int i=0 ; i<A.length ; i++){
-            if(A[i] == min_ele)
-                min_Index = Math.max(min_Index, i);
-            if(A[i] == max_ele)
-                max_Index = Math.max(max_Index, i);
+            if (A[i] == min_ele) {
+                min_Index = i; // Update to the most recent index where min_ele is found
+            }
+            if (A[i] == max_ele) {
+                max_Index = i; // Update to the most recent index where max_ele is found
+            }
 
             if(min_Index != -1 && max_Index != -1){
                 int len = Math.abs(max_Index - min_Index) + 1;
