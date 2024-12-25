@@ -9,7 +9,7 @@ public class MergeSortedOverlappingIntervals {
         ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
 
         // Ensure the intervals are sorted
-      //  A.sort((o1, o2) -> o1.get(0) - o2.get(0));
+        A.sort((o1, o2) -> o1.get(0) - o2.get(0));
 
         int curr_Start = A.get(0).get(0);
         int curr_End = A.get(0).get(1);
