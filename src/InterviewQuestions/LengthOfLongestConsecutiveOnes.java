@@ -6,7 +6,7 @@ public class LengthOfLongestConsecutiveOnes {
     public int solve(String A) {
         int N = A.length();
         int totalOnes = 0;
-        int maxLength = 0;
+        int maxCount = 0;
 
         // Count total number of '1's
         for (int i = 0; i < N; i++) {
@@ -15,9 +15,8 @@ public class LengthOfLongestConsecutiveOnes {
             }
         }
 
-        // If there are no '1's
-        if (totalOnes == 0) {
-            return 0;
+        if (totalOnes == 1) {
+            return 1;
         }
 
         // If the entire string is '1's, we can only return the length
@@ -25,11 +24,17 @@ public class LengthOfLongestConsecutiveOnes {
             return N;
         }
 
+        if(totalOnes==0)
+        {
+            return 0;
+        }
+
+
         // Iterate through the string
         for (int i = 0; i < N; i++) {
             // If current character is '0', calculate left and right lengths
             if (A.charAt(i) == '0') {
-                int left = 0, right = 0;
+                int left = 0;
 
                 // Count consecutive '1's on the left
                 int j = i - 1;
@@ -40,22 +45,21 @@ public class LengthOfLongestConsecutiveOnes {
 
                 // Count consecutive '1's on the right
                 j = i + 1;
+                int right = 0;
                 while (j < N && A.charAt(j) == '1') {
                     right++;
                     j++;
                 }
-
                 // If flipping the '0' does not exceed total ones, include it
                 int currentLength = left + right + 1;
                 if (left + right < totalOnes) {
-                    maxLength = Math.max(maxLength, currentLength);
+                    maxCount = Math.max(maxCount, currentLength);
                 } else {
-                    maxLength = Math.max(maxLength, left + right);
+                    maxCount = Math.max(maxCount, left + right);
                 }
             }
         }
-
-        return maxLength;
+        return maxCount;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
