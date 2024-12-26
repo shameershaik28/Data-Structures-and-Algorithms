@@ -4,63 +4,34 @@ import java.util.Scanner;
 
 public class LengthOfLongestConsecutiveOnes {
     public int solve(String A) {
-        int N = A.length();
-        int totalOnes = 0;
-        int maxCount = 0;
+        int N = A.length(); // Get the length of the input string
 
-        // Count total number of '1's
-        for (int i = 0; i < N; i++) {
-            if (A.charAt(i) == '1') {
-                totalOnes++;
-            }
-        }
-
-        if (totalOnes == 1) {
-            return 1;
-        }
-
-        // If the entire string is '1's, we can only return the length
-        if (totalOnes == N) {
-            return N;
-        }
-
-        if(totalOnes==0)
-        {
-            return 0;
-        }
-
+        int totalOnes = 0, leftStreak = 0; // Initialize totalOnes to keep track of the total number of 1s
+        int rightStreak = 0, maxStreak = 0; // rightStreak tracks the current streak of 1s and maxStreak stores the result
 
         // Iterate through the string
         for (int i = 0; i < N; i++) {
-            // If current character is '0', calculate left and right lengths
-            if (A.charAt(i) == '0') {
-                int left = 0;
+            // If the current character is '1', increment the right streak and total count of 1s
+            if (A.charAt(i) == '1') {
+                rightStreak++; // Increment the right streak of 1s
+                totalOnes++; // Increment total count of 1s in the string
+            } else {
+                // If we encounter a '0', calculate the maximum streak by considering the left + right + 1 (for flipping 1 zero)
+                maxStreak = Math.max(maxStreak, leftStreak + rightStreak + 1);
 
-                // Count consecutive '1's on the left
-                int j = i - 1;
-                while (j >= 0 && A.charAt(j) == '1') {
-                    left++;
-                    j--;
-                }
-
-                // Count consecutive '1's on the right
-                j = i + 1;
-                int right = 0;
-                while (j < N && A.charAt(j) == '1') {
-                    right++;
-                    j++;
-                }
-                // If flipping the '0' does not exceed total ones, include it
-                int currentLength = left + right + 1;
-                if (left + right < totalOnes) {
-                    maxCount = Math.max(maxCount, currentLength);
-                } else {
-                    maxCount = Math.max(maxCount, left + right);
-                }
+                // Reset the left streak to be the current right streak and reset the right streak
+                leftStreak = rightStreak; // Move the current streak of 1s to the left part
+                rightStreak = 0; // Reset the right streak since we've encountered a zero
             }
         }
-        return maxCount;
+
+        // Final check after the loop to ensure the last part is considered
+        maxStreak = Math.max(maxStreak, leftStreak + rightStreak + 1);
+
+        // Return the minimum of the total count of 1s and the maximum streak found (to avoid flipping more than one 0)
+        return Math.min(totalOnes, maxStreak);
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the binary string:");
