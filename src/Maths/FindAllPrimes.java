@@ -5,38 +5,41 @@ import java.util.Scanner;
 
 public class FindAllPrimes {
     public int[] solve(int A) {
-        // Boolean array to track whether each number is prime.
-        // `isPrime[i]` is true if `i` is prime, false otherwise.
-        boolean[] isPrime = new boolean[A + 1];
-        // List to store all prime numbers.
-        ArrayList<Integer> primes = new ArrayList<>();
 
-        // Initialize the isPrime array. Assume all numbers are prime initially.
-        for (int i = 0; i <= A; i++) {
+        if (A <= 2) {
+            return new int[0]; // No prime numbers less than 2
+        }
+
+        // Step 1: Create a boolean array to track prime numbers
+        boolean[] isPrime = new boolean[A];
+        for (int i = 2; i < A; i++) {
             isPrime[i] = true;
         }
-        // Mark 0 and 1 as non-prime, as they are not prime numbers.
-        isPrime[0] = isPrime[1] = false;
 
-        // Sieve of Eratosthenes algorithm
-        for (int i = 2; i <= A; i++) {
-            // If the current number is prime, process its multiples.
+        // Step 2: Sieve of Eratosthenes
+        for (int i = 2; i * i < A; i++) {
             if (isPrime[i]) {
-                // Add the current prime number to the list.
-                primes.add(i);
-                // Mark all multiples of `i` as non-prime.
-                for (int j = 2 * i; j <= A; j += i) {
+                for (int j = i * i; j < A; j += i) {
                     isPrime[j] = false;
                 }
             }
         }
 
-        // Convert the ArrayList of primes into an array.
-        int[] ans = new int[primes.size()];
-        for (int i = 0; i < primes.size(); i++) {
-            ans[i] = primes.get(i);
+        // Step 3: Collect all prime numbers
+        ArrayList<Integer> primes = new ArrayList<>();
+        for (int i = 2; i < A; i++) {
+            if (isPrime[i]) {
+                primes.add(i);
+            }
         }
-        return ans;
+
+        // Step 4: Convert ArrayList to int[] and return
+        int[] result = new int[primes.size()];
+        for (int i = 0; i < primes.size(); i++) {
+            result[i] = primes.get(i);
+        }
+
+        return result;
     }
 
     public static void main(String[] args) {
