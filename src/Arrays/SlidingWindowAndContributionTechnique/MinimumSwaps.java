@@ -4,52 +4,50 @@ import java.util.Scanner;
 
 public class MinimumSwaps {
     public int solve(int[] A, int B) {
-        // Initialize variables
-        int min_swaps = Integer.MAX_VALUE; // Initialize min_swaps to maximum possible integer value
-        int n = A.length; // Length of array A
-        int numLessThanB = 0; // Count of elements less than or equal to B in A
+        int n = A.length;
+        int count = 0; // Count of elements <= B
+        int bad = 0;   // Count of elements > B in the first window
+        int minSwaps;  // Minimum swaps required
 
-        // Count the number of elements in A that are less than or equal to B
-        for(int i = 0; i < n; i++) {
-            if(A[i] <= B) {
-                numLessThanB++;
-            }
-        }
-        int k = numLessThanB; // Store the count of elements less than or equal to B
-        int temp = 0;
-
-        // Count the number of elements greater than B in the first k elements of A
-        for(int i = 0; i < k; i++) {
-            if(A[i] > B) {
-                temp++;
+        // Step 1: Count the number of elements <= B
+        for (int num : A) {
+            if (num <= B) {
+                count++;
             }
         }
 
-        min_swaps = temp; // Initialize min_swaps with the count of elements greater than B in the first k elements
-        int swaps = min_swaps; // Initialize swaps with min_swaps
-
-        int s = 1;
-        int e = k;
-
-        // Sliding window approach
-        while(e < n) {
-            // Decrement swaps if the element going out of the window is greater than B
-            if(A[s - 1] > B) {
-                swaps--;
+        // Step 2: Count "bad" elements in the first window of size `count`
+        for (int i = 0; i < count; i++) {
+            if (A[i] > B) {
+                bad++;
             }
-            // Increment swaps if the element coming into the window is greater than B
-            if(A[e] > B) {
-                swaps++;
-            }
-            // Update min_swaps if swaps is less than min_swaps
-            if(swaps < min_swaps) {
-                min_swaps = swaps;
-            }
-            s++;
-            e++;
         }
-        // Return the minimum number of swaps required
-        return min_swaps;
+
+        // Initialize `minSwaps` to the count of bad elements in the first window
+        minSwaps = bad;
+
+        // Step 3: Sliding window logic
+        int windowStart = 0; // Start of the window
+        for (int windowEnd = count; windowEnd < n; windowEnd++) {
+            // Check if the element leaving the window is "bad"
+            if (A[windowStart] > B) {
+                bad--; // Reduce bad count if the outgoing element is bad
+            }
+
+            // Check if the element entering the window is "bad"
+            if (A[windowEnd] > B) {
+                bad++; // Increase bad count if the incoming element is bad
+            }
+
+            // Move the start of the window forward
+            windowStart++;
+
+            // Update `minSwaps` to the smallest `bad` count seen so far
+            minSwaps = Math.min(minSwaps, bad);
+        }
+
+        // Step 4: Return the minimum swaps required
+        return minSwaps;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
