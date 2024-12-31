@@ -2,7 +2,7 @@ package Arrays.Subarrays;
 
 import java.util.Scanner;
 
-//brute-force approach
+//Two Pointers Approach : Most Optimal
 public class CountingSubarraysEasy {
     public int solve(int[] A, int B) {
         int n = A.length;
