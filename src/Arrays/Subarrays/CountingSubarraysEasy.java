@@ -5,22 +5,23 @@ import java.util.Scanner;
 //brute-force approach
 public class CountingSubarraysEasy {
     public int solve(int[] A, int B) {
-        int N = A.length;
-        int count = 0;
-        for(int i =0; i<N ; i++)
-        {
-            int sum =0;
-            for(int j =i; j<N; j++)
-            {
-                sum += A[j];
-                if(sum<B)
-                {
-                    count++;
-                }
+        int n = A.length;
+        int ans = 0, sum = 0, left = 0;
+
+        for (int right = 0; right < n; right++) {
+            sum += A[right];
+
+            // Shrink the window until the sum condition is satisfied
+            while (sum >= B && left <= right) {
+                sum -= A[left];
+                left++;
             }
 
+            // All subarrays ending at `right` and starting between `left` and `right` are valid
+            ans += (right - left + 1);
         }
-        return count;
+
+        return ans;
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
