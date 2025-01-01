@@ -6,22 +6,11 @@ import java.util.Scanner;
 public class PrefixMaximum {
     public int[] solve(int[] A) {
         int N = A.length;
-        int max = A[0];
-
         int[] prefixSum = new int[N];
         prefixSum[0] = A[0];
         for(int i=1; i<N;i++)
         {
-            if(A[i]>max)
-            {
-                prefixSum[i] = A[i];
-                max = A[i];
-            }
-            else
-            {
-                prefixSum[i] = prefixSum[i-1];
-            }
-
+            prefixSum[i] = Math.max(prefixSum[i-1], A[i]);
         }
         return prefixSum;
     }
