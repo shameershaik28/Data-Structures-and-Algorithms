@@ -6,19 +6,13 @@ import java.util.Scanner;
 public class SuffixMaximum {
     public int[] solve(int[] A) {
         int n = A.length;
-        int maxSum= A[n-1];
-        int[] suff = new int[n];
-        suff[n-1] = maxSum;
-
-        for(int i =n-2; i>=0;i--)
+        int[] suffixSum = new int[n];
+        suffixSum[n-1] = A[n-1];
+        for(int i = n-2; i >=0; i--)
         {
-            if(A[i]>maxSum)
-            {
-                maxSum = A[i];
-            }
-            suff[i] = maxSum;
+            suffixSum[i] = Math.max(suffixSum[i+1], A[i]);
         }
-        return suff;
+        return suffixSum;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
