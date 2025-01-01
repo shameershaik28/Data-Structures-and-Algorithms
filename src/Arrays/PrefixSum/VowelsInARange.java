@@ -5,28 +5,20 @@ import java.util.Scanner;
 
 public class VowelsInARange {
     public int[] solve(String A, int[][] B) {
-        int N = A.length();
-        int M = B.length;
-
-        if(M==0|| N==0)
-            return new int[0];
-
-
-        int[] ans= new int[M];
-        for(int i=0; i<M; i++)
-        {
-            int count=0;
-            int start= B[i][0];
-            int end = B[i][1];
-
-            for(int j=start; j<=end; j++)
-            {
-                if(A.charAt(j)=='a'||A.charAt(j)=='e'||A.charAt(j)=='i'||A.charAt(j)=='o'||A.charAt(j)=='u')
-                {
-                    count++;
-                }
+        int n = A.length();
+        int[] pref = new int[n + 1];
+        pref[0] = 0;
+        for(int i = 0 ; i < n ; i++){
+            if(A.charAt(i) == 'a' || A.charAt(i) == 'e' || A.charAt(i) == 'i' || A.charAt(i) == 'o' || A.charAt(i) == 'u'){
+                pref[i + 1] = pref[i] + 1;
             }
-            ans[i]= count;
+            else{
+                pref[i + 1] = pref[i];
+            }
+        }
+        int[] ans = new int [B.length];
+        for(int i = 0 ; i < B.length ; i++){
+            ans[i] = pref[B[i][1] + 1] - pref[B[i][0]];
         }
         return ans;
     }
