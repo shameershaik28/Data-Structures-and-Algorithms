@@ -8,24 +8,14 @@ public class RainWaterTrapped {
         int ans =0; // final result
         int[] pSum = new int[N];
         pSum[0] = A[0];
-        int pmax = A[0];
         for(int i =1; i<N; i++){
-            if(A[i]>pmax)
-            {
-                pmax=A[i];
-            }
-            pSum[i]= pmax;
+            pSum[i]= Math.max(pSum[i-1], A[i]);
         }
 
         int[] sSum= new int[N];
          sSum[N-1] = A[N-1];
-         int sMax=A[N-1];
         for(int i =N-2; i>=0; i--){
-            if(A[i]>sMax)
-            {
-                sMax=A[i];
-            }
-            sSum[i]= sMax;
+            sSum[i]= Math.max(pSum[i+1], A[i]);
         }
 
         for(int i=0; i<N; i++){
