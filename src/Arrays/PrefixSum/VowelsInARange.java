@@ -5,20 +5,38 @@ import java.util.Scanner;
 
 public class VowelsInARange {
     public int[] solve(String A, int[][] B) {
-        int n = A.length();
-        int[] pref = new int[n + 1];
-        pref[0] = 0;
-        for(int i = 0 ; i < n ; i++){
-            if(A.charAt(i) == 'a' || A.charAt(i) == 'e' || A.charAt(i) == 'i' || A.charAt(i) == 'o' || A.charAt(i) == 'u'){
-                pref[i + 1] = pref[i] + 1;
-            }
-            else{
-                pref[i + 1] = pref[i];
+        int N = A.length();
+        int M = B.length;
+        int[] arr = new int[N];
+
+        // check if it is a vowel
+        for(int i = 0 ; i < N ; i++){
+            char ch = A.charAt(i);
+            if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+                arr[i] = 1;
             }
         }
-        int[] ans = new int [B.length];
-        for(int i = 0 ; i < B.length ; i++){
-            ans[i] = pref[B[i][1] + 1] - pref[B[i][0]];
+
+        //Building the prefixSum array
+        int[] prefixSum = new int[N];
+        prefixSum[0] = arr[0];
+        for(int i = 1 ; i < N ; i++){
+            prefixSum[i] = prefixSum[i-1] + arr[i];
+        }
+
+        //Processing the queries
+        int[] ans = new int [M];
+        for(int i = 0 ; i < M ; i++){
+              int L = B[i][0];
+              int R = B[i][1];
+
+              if(L==0)
+              {
+                  ans[i] = prefixSum[R];
+              }
+              else {
+                  ans[i] = prefixSum[R] + prefixSum[L - 1];
+              }
         }
         return ans;
     }
