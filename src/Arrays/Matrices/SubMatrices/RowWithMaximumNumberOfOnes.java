@@ -1,20 +1,27 @@
-package Arrays.Matrices;
+package Arrays.Matrices.SubMatrices;
 
 import java.util.Scanner;
 
 public class RowWithMaximumNumberOfOnes {
     public int solve(int[][] A) {
         int N = A.length;
-       int i =0, j =N-1, ans =0;
+        int max = Integer.MIN_VALUE;
+        int index=-1;
 
-       while(i<N && j>=0){
-           while(j>=0 && A[i][j]==1){
-               j--;
-               ans=i;
-           }
-           i++;
-       }
-        return ans;
+        for(int i = 0; i < N; i++) {
+            int sum =0;
+            for(int j = 0; j < N; j++) {
+                if(A[i][j] == 1) {
+                    sum++;
+                }
+            }
+
+            if(sum > max) {
+                max = sum;
+                index = i;
+            }
+        }
+        return index;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -31,6 +38,6 @@ public class RowWithMaximumNumberOfOnes {
 
       RowWithMaximumNumberOfOnes r = new RowWithMaximumNumberOfOnes();
       int ans = r.solve(A);
-      System.out.println(ans);
+      System.out.println("The highest number of 1's is in index : " + ans);
     }
 }
