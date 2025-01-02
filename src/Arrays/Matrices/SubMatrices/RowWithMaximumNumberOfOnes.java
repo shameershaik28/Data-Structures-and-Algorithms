@@ -5,24 +5,35 @@ import java.util.Scanner;
 public class RowWithMaximumNumberOfOnes {
     public int solve(int[][] A) {
         int N = A.length;
-        int max = Integer.MIN_VALUE;
-        int index=-1;
+        int maxIndex = -1;
+        int maxOnes = 0;
 
-        for(int i = 0; i < N; i++) {
-            int sum =0;
-            for(int j = 0; j < N; j++) {
-                if(A[i][j] == 1) {
-                    sum++;
-                }
-            }
+        for (int i = 0; i < N; i++) {
+            int firstOneIndex = findFirstOne(A[i], 0, N - 1);
+            int countOnes = firstOneIndex == -1 ? 0 : (N - firstOneIndex);
 
-            if(sum > max) {
-                max = sum;
-                index = i;
+            if (countOnes > maxOnes) {
+                maxOnes = countOnes;
+                maxIndex = i;
             }
         }
-        return index;
+        return maxIndex;
     }
+
+    private int findFirstOne(int[] row, int low, int high) {
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (row[mid] == 1 && (mid == 0 || row[mid - 1] == 0)) {
+                return mid; // Found the first 1
+            } else if (row[mid] == 0) {
+                low = mid + 1; // Move right
+            } else {
+                high = mid - 1; // Move left
+            }
+        }
+        return -1; // No 1s found
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of rows: ");
