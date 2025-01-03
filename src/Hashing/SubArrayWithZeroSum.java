@@ -5,37 +5,31 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 public class SubArrayWithZeroSum {
-        // Method to solve the problem
-        public int solve(int[] A) {
-            int n = A.length;  // Length of the array A
-            long pf[] = new long[n];  // Array to store prefix sums
-            HashMap<Long, Integer> hm = new HashMap<>();  // HashMap to store prefix sum and their indices
+    public int solve(int[] A) {
+        int n = A.length;  // Length of the array A
+        long pf = 0;  // Variable to store the current prefix sum
+        HashSet<Long> set = new HashSet<>();  // HashSet to store the prefix sums
 
-            // Initialize the prefix sum array
-            pf[0] = A[0];  // The first element is the same as the first prefix sum
-            for (int i = 1; i < n; i++) {
-                pf[i] = pf[i - 1] + A[i];  // Compute prefix sum for each index
+        // Traverse the array
+        for (int i = 0; i < n; i++) {
+            pf += A[i];  // Update the prefix sum
+
+            // Check the first condition: If the current prefix sum is zero
+            if (pf == 0) {
+                return 1;  // Return 1 as the solution
             }
 
-            // Check the first condition: If any prefix sum is zero, return 1
-            for (int i = 0; i < n; i++) {
-                if (pf[i] == 0) {  // If the current prefix sum is zero
-                    return 1;  // Return 1 as the solution
-                }
+            // Check the second condition: If the prefix sum repeats
+            if (set.contains(pf)) {
+                return 1;  // Return 1 as the solution
+            } else {
+                set.add(pf);  // Add the current prefix sum to the set
             }
-
-            // Check the second condition: If a prefix sum repeats, return 1
-            for (int i = 0; i < n; i++) {
-                if (hm.containsKey(pf[i])) {  // If the current prefix sum has already been seen
-                    return 1;  // Return 1 as the solution
-                } else {
-                    hm.put(pf[i], i);  // Store the current prefix sum and its index
-                }
-            }
-
-            // If no condition is met, return 0
-            return 0;
         }
+
+        // If no condition is met, return 0
+        return 0;
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
