@@ -1,35 +1,31 @@
 package Hashing;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class FirstRepeatingElement {
     public int solve(int[] A) {
-        int N = A.length;
+        HashSet<Integer> set = new HashSet<>();
+        int firstDuplicate = -1;
 
-        HashMap<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < N; i++) {
-            if(map.containsKey(A[i])) {
-                int val = map.get(A[i]);
-                map.put(A[i], val + 1);
-            }
-            else {
-                map.put(A[i], 1);
+        // Traverse the array from right to left to ensure first occurrence is captured
+        for (int i = A.length - 1; i >= 0; i--) {
+            if (set.contains(A[i])) {
+                firstDuplicate = A[i]; // Update the duplicate found
+            } else {
+                set.add(A[i]); // Add number to the set
             }
         }
 
-        //Traverse the array and find the element that occurs more than once
-        for(int i = 0; i < N; i++) {
-            if(map.get(A[i])> 1) {
-                return A[i];
-            }
-        }
-        return -1;
+        return firstDuplicate;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of array: ");
         int N = sc.nextInt();
         int[] arr = new int[N];
+        System.out.println("Enter the elements: ");
         for (int i = 0; i < N; i++) {
             arr[i] = sc.nextInt();
         }
