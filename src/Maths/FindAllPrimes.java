@@ -11,15 +11,15 @@ public class FindAllPrimes {
         }
 
         // Step 1: Create a boolean array to track prime numbers
-        boolean[] isPrime = new boolean[A];
-        for (int i = 2; i < A; i++) {
+        boolean[] isPrime = new boolean[A + 1];  // Size A + 1 to include A itself
+        for (int i = 2; i <= A; i++) {
             isPrime[i] = true;
         }
 
         // Step 2: Sieve of Eratosthenes
-        for (int i = 2; i * i < A; i++) {
+        for (int i = 2; i * i <= A; i++) {
             if (isPrime[i]) {
-                for (int j = i * i; j < A; j += i) {
+                for (int j = i * i; j <= A; j += i) {
                     isPrime[j] = false;
                 }
             }
@@ -27,7 +27,7 @@ public class FindAllPrimes {
 
         // Step 3: Collect all prime numbers
         ArrayList<Integer> primes = new ArrayList<>();
-        for (int i = 2; i < A; i++) {
+        for (int i = 2; i <= A; i++) { // Include A in the range
             if (isPrime[i]) {
                 primes.add(i);
             }
