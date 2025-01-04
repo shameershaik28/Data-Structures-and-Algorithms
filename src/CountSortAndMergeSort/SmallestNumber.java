@@ -7,24 +7,22 @@ import java.util.Scanner;
 public class SmallestNumber {
     public int[] smallestNumber(int[] A) {
         int N = A.length;
-        int[] far = new int[10];
-        int[] ans = new int[N];
+        int[] freq = new int[10];  // Frequency array for digits 0-9
 
+        // Step 1: Count the frequency of each digit
         for (int i = 0; i < N; i++) {
-            int val = A[i];
-            far[val]++;
+            freq[A[i]]++;
         }
 
-        //Iterate on Frequency and create an ans[]
-        int K=0;
-        for (int i = 0; i <10; i++) {
-            int freq = far[i];
-            for(int j=0;j<freq;j++){
-                ans[K]= i;
-                K++;
+        // Step 2: Reconstruct the smallest number in-place
+        int k = 0;  // Pointer to track position in the input array
+        for (int digit = 0; digit < 10; digit++) {
+            for (int i = 0; i < freq[digit]; i++) {
+                A[k++] = digit;  // Place the digit in the input array
             }
         }
-        return ans;
+
+        return A;  // Return the modified array
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
