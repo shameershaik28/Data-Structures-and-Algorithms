@@ -15,14 +15,15 @@ public class SmallestNumber {
         }
 
         // Step 2: Reconstruct the smallest number in-place
-        int k = 0;  // Pointer to track position in the input array
-        for (int digit = 0; digit < 10; digit++) {
-            for (int i = 0; i < freq[digit]; i++) {
-                A[k++] = digit;  // Place the digit in the input array
+        int indx = 0;  // Pointer to track position in the input array
+        for (int i = 0; i < 10; i++) {
+            int fq = freq[i];
+            for (int j = 0; j < fq; j++) {
+                A[indx] = i;  // Place the digit in the input array
+                indx++;
             }
         }
-
-        return A;  // Return the modified array
+        return A;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
