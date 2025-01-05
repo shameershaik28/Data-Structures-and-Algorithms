@@ -6,22 +6,30 @@ import java.util.Scanner;
 public class QuickSort {
 
     public int partition(int[] arr, int s, int e) {
-        int pivot = arr[e]; // Select the last element as the pivot
-        int j = s; // Start partitioning from the 's' index
-        for (int i = s; i < e; i++) {
-            if (arr[i] < pivot) {
-                // Swap arr[i] and arr[j]
+        int N = arr.length; // Get the length of the array.
+        int i = s; // Pointer to track the boundary of elements less than the pivot.
+        int j = s; // Pointer to iterate through the array.
+        int pivot = arr[e]; // Choose the last element as the pivot.
+
+        // Iterate through the array to partition elements based on the pivot.
+        while (j <=e) {
+            if (arr[j] < pivot) { // If the current element is less than the pivot:
+                // Swap arr[i] and arr[j] to move the smaller element to the left.
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
-                j++;
+                i++; // Increment the boundary pointer.
             }
+            j++; // Move to the next element.
         }
-        // Swap the pivot element to its correct position
-        int temp = arr[e];
-        arr[e] = arr[j];
-        arr[j] = temp;
-        return j; // Return the partition index
+
+        // Swap the pivot element with the element at the boundary index.
+        // This places the pivot in its correct sorted position.
+        int temp = arr[j - 1];
+        arr[j - 1] = arr[i];
+        arr[i] = temp;
+
+        return i; // Return the index of the pivot in the partitioned array.
     }
 
     public void quickSort(int[] arr, int s, int e) {
