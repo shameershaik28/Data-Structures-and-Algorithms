@@ -1,51 +1,51 @@
 package QuickSortAndComparatorProblems;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class FactorsSort {
-
-    public ArrayList<Integer> solve(ArrayList<Integer> A) {
-        // Sorting the list using a custom comparator
-        Collections.sort(A, new Comparator<Integer>() {
-            // Compare function to compare two elements
-            public int compare(Integer a, Integer b) {
-                // Find the factor counts of two numbers
-                int cfX = factorCount(a);
-                int cfY = factorCount(b);
-
-                // Compare based on the number of factors
-                if (cfX < cfY)
-                    return -1; // Smaller count comes first
-                else if (cfX > cfY)
-                    return 1;  // Larger count comes later
-                else {
-                    // If counts are equal, compare values numerically
-                    if (a <= b)
-                        return -1; // Smaller number comes first
-                    else
-                        return 1;  // Larger number comes later
-                }
+    // Function to count the number of factors of a number
+    public int factorCount(int n) {
+        int count = 0;
+        for (int i = 1; i * i <= n; i++) {
+            if (n % i == 0) {
+                if (i == n / i) // Perfect square case
+                    count++;
+                else
+                    count += 2; // Count both factors
             }
+        }
+        return count;
+    }
 
-            // Function to calculate the number of factors of a number
-            public int factorCount(int n) {
-                int count = 0;
-                for (int i = 1; i * i <= n; i++) {
-                    if (n % i == 0) {
-                        if (i == n / i) // Perfect square case
-                            count++;
-                        else
-                            count += 2; // Count both factors
-                    }
+    public int[] solve(int[] A) {
+        // Convert int[] to Integer[] for custom sorting
+        Integer[] arr = new Integer[A.length];
+        for (int i = 0; i < A.length; i++) {
+            arr[i] = A[i];
+        }
+
+        // Sort using a custom comparator
+        Arrays.sort(arr, new Comparator<Integer>() {
+            public int compare(Integer val1, Integer val2) {
+                int fact1 = factorCount(val1);
+                int fact2 = factorCount(val2);
+
+                if (fact1 < fact2) {
+                    return -1; // Sort by ascending factor count
+                } else if (fact1 > fact2) {
+                    return 1;
+                } else {
+                    return val1 - val2; // Sort by natural order in case of ties
                 }
-                return count;
             }
         });
 
-        return A; // Return the sorted list
+        // Convert Integer[] back to int[]
+        for (int i = 0; i < A.length; i++) {
+            A[i] = arr[i];
+        }
+
+        return A;
     }
 
     public static void main(String[] args) {
@@ -55,24 +55,16 @@ public class FactorsSort {
         System.out.print("Enter the number of elements: ");
         int N = sc.nextInt();
 
-        // Input: List of elements
-        ArrayList<Integer> A = new ArrayList<>();
-        System.out.println("Enter the elements:");
+        int[] A = new int[N];
+        System.out.println("Enter the elements: ");
         for (int i = 0; i < N; i++) {
-            A.add(sc.nextInt());
+            A[i] = sc.nextInt();
         }
 
-        // Create an instance of the FactorSort class
-
         FactorsSort fs = new FactorsSort();
-
-        // Call the solve method to sort the list
-        ArrayList<Integer> sortedList = fs.solve(A);
-
-        // Output: Sorted list
-        System.out.println("Sorted list:");
-        for (int num : sortedList) {
-            System.out.print(num + " ");
+        int[] result = fs.solve(A);
+        for (int i = 0; i < result.length; i++) {
+            System.out.print(result[i] + " ");
         }
     }
 }
