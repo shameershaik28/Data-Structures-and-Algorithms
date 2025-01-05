@@ -1,4 +1,4 @@
-package TwoPointers;
+package QuickSortAndComparatorProblems;
 
 import java.util.Scanner;
 
