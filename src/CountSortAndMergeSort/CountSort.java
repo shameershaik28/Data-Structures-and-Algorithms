@@ -6,31 +6,39 @@ import java.util.Scanner;
 public class CountSort {
     public int[] solve(int[] A) {
         int N = A.length;
+
+        // Find the max and min values in the array
         int max = A[0];
-
-        // find the max number
-        for(int i = 1;i<A.length;i++){
-            max = Math.max(A[i],max);
+        int min = A[0];
+        for (int i = 1; i < N; i++) {
+            max = Math.max(A[i], max);
+            min = Math.min(A[i], min);
         }
-     // create frequency array of size max+1 to store numbers till max
-        int[] frequency = new int[max+1];
-        int[] ans = new int[N];
+
+        // Shift values to make them non-negative
+        int shift = -min;
+        int range = max - min + 1; // The range of values after shifting
+
+        // Create frequency array of size equal to the range
+        int[] frequency = new int[range];
         for (int i = 0; i < N; i++) {
-            int val = A[i];
-            frequency[val]++;
+            frequency[A[i] + shift]++;
         }
 
-        //Iterate on Frequency and create an ans[]
-        int K=0;
-        for (int i = 0; i <=max; i++) {
+        // Iterate on the frequency array to create the sorted output
+        int[] ans = new int[N];
+        int K = 0;
+        for (int i = 0; i < range; i++) {
             int freq = frequency[i];
-            for(int j=0;j<freq;j++){
-                ans[K]= i;
+            for (int j = 0; j < freq; j++) {
+                ans[K] = i - shift; // Shift back to original values
                 K++;
             }
         }
+
         return ans;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of array");
