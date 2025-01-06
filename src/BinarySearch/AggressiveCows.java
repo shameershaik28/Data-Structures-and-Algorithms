@@ -24,8 +24,8 @@ public class AggressiveCows {
     }
 
     public boolean isPossibleToPlaceCows(int[] A, int distance, int B) {
-        int i =0;
-        int count = 1;
+        int i =0; //Location of the first cow
+        int count = 1; // Initial Cow
 
         for(int j=1; j<A.length; j++)
         {
