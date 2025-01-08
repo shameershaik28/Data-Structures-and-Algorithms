@@ -5,49 +5,38 @@ import java.util.Scanner;
 
 public class PairsWithGivenSumDuplicates {
     public int solve(int[] A, int B) {
-        int MOD = 1000000007;
         Arrays.sort(A); // Ensure the array is sorted
         int N = A.length;
-        int l = 0;
-        int r = N - 1;
-        long count = 0;
+        int left = 0;
+        int right = N - 1;
+        int count = 0;
 
-        while (l < r) {
-            int sum = A[l] + A[r];
+        while (left < right) {
+            int sum = A[left] + A[right];
             if (sum == B) {
-                if (A[l] == A[r]) {
-                    // All elements between l and r are the same
-                    int numElements = r - l + 1;
-                    count += (long) numElements * (numElements - 1) / 2;
-                    count %= MOD;
-                    break;
-                } else {
-                    int c1 = 1, c2 = 1;
-
+                int c1 = 1, c2 = 1;
                     // Count duplicates on the left
-                    while (l + 1 < r && A[l] == A[l + 1]) {
+                    while (left < right && A[left] == A[left + 1]) {
                         c1++;
-                        l++;
+                        left++;
                     }
 
                     // Count duplicates on the right
-                    while (r - 1 > l && A[r] == A[r - 1]) {
+                    while (left< right && A[right] == A[right - 1]) {
                         c2++;
-                        r--;
+                        right--;
                     }
 
-                    count += (long) c1 * c2;
-                    count %= MOD;
-                    l++;
-                    r--;
-                }
+                    count += c1 * c2;
+                    left++;
+                    right--;
             } else if (sum > B) {
-                r--;
+                right--;
             } else {
-                l++;
+                left++;
             }
         }
-        return (int) count;
+        return count;
     }
 
     public static void main(String[] args) {
