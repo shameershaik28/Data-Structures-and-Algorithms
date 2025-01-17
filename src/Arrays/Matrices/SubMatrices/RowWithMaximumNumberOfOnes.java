@@ -4,34 +4,24 @@ import java.util.Scanner;
 
 public class RowWithMaximumNumberOfOnes {
     public int solve(int[][] A) {
-        int N = A.length;
-        int maxIndex = -1;
-        int maxOnes = 0;
+        int N= A.length;
+        int i=0;
+        int j= N-1;
+        int ans =0;
 
-        for (int i = 0; i < N; i++) {
-            int firstOneIndex = findFirstOne(A[i], 0, N - 1);
-            int countOnes = firstOneIndex == -1 ? 0 : (N - firstOneIndex);
-
-            if (countOnes > maxOnes) {
-                maxOnes = countOnes;
-                maxIndex = i;
+        while(i<N && j>=0)
+        {
+            if(A[i][j]==1)
+            {
+                ans=i;
+                j--;
+            }
+            else
+            {
+                i++;
             }
         }
-        return maxIndex;
-    }
-
-    private int findFirstOne(int[] row, int low, int high) {
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
-            if (row[mid] == 1 && (mid == 0 || row[mid - 1] == 0)) {
-                return mid; // Found the first 1
-            } else if (row[mid] == 0) {
-                low = mid + 1; // Move right
-            } else {
-                high = mid - 1; // Move left
-            }
-        }
-        return -1; // No 1s found
+        return ans;
     }
 
     public static void main(String[] args) {
