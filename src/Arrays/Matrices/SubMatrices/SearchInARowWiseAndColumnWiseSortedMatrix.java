@@ -1,4 +1,4 @@
-package Arrays.ArraysTwoDimensional;
+package Arrays.Matrices.SubMatrices;
 
 import java.util.Scanner;
 
